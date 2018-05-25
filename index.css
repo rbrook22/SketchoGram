@@ -1,0 +1,33 @@
+h1 { 
+    display: flex;
+    justify-content: center;
+    font-family: 'Italianno', cursive;
+    font-size: 60px;
+
+}
+img {
+    width: 90%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: double 3px black;
+}
+.photogrid1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.photogrid2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.photo-item {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+hr {
+    width: 60%;
+    border-color: rgba(159, 159, 163, 0.89);
+}
