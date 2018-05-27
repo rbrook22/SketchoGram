@@ -5,24 +5,34 @@ h1 {
     font-size: 60px;
 
 }
+.mainPhoto {
+    background-image: url(Images/sketch.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+}
 .photo-header{
     display: none;
+    border-style: none;
+    height: 150px;
+    width: auto;
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Italianno', cursive;
+    font-size: 30px;
+}
+p {
+    margin: 0;
 }
 img {
     width: 90%;
     padding-left: 10px;
     padding-right: 10px;
     border: double 3px black;
-}
-.photogrid1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.photogrid2 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 .photo-item {
     padding-top: 15px;
@@ -34,35 +44,56 @@ hr {
     width: 60%;
     border-color: rgba(159, 159, 163, 0.89);
 }
+.empty {
+    border: solid 3px red;
+    display: none;
+    justify-content: center;
+    height: 30%;
+    width: auto;
+}
+.empty img {
+    height: 100%;
+    width: auto;
+}
 
-/* Beginning of Media Queries */
+/*Media Queries @ 600 pixels */
 @media screen and (min-width: 600px){
     .mainPhoto {
         display:flex;
-        flex-direction: row;
         justify-content: center;
     }
-    .photo-header{
-        display: block;
-        border-style: none;
-        height: 150px;
+    .photo-header {
+        display: inline;
     }
     .photo-item {
-        width: 30%;
+        max-width: 25%;
+        max-height: 200px;
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
-    .photogrid1 {
+    .photo-grid {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    .photogrid2 {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: center;
+        flex-wrap: wrap;
     }
     hr {
+        display: none;
+    }
+    .empty {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
+        justify-content: center;
+        height: 300px;
+    }
+}
+/* Media Querie @ 800 Pixels */
+@media screen and (min-width: 850px){
+    .photo-item{
+        width: 15%;
+        margin-top: 5px;
+        margin-bottom:5px;
+    }
+    .photo-grid {
+        display: flex;
+        width: auto;
     }
 }
